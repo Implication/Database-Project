@@ -1,0 +1,71 @@
+CREATE TABLE Course (
+	CNum varchar(10) PRIMARY KEY
+	CTitle varchar(40),
+	TextBook varchar(40),
+	Units Int,
+	PCNum char(5) FOREIGN KEY REFERENCES Course(CNum),
+	DNum char(4) FOREIGN KEY REFERENCES Department(DNum),
+);
+
+CREATE TABLE Professor (
+	SSN varchar(9) PRIMARY KEY,
+	Title vharchar(20),
+	Pname varchar(30),
+	Sex char(1),
+	College varchar(20),
+	PSaddr varchar(30),
+	Pcity varchar(30),
+	Pstate char(2),
+	Zip char(5),
+	CollegeDegree varchar(20),
+	Salary varchar(12),
+	PTNum varchar(12)
+)
+
+CREATE TABLE Prerequisites (
+	PCNum varchar(5) PRIMARY KEY,
+	CNum varchar(8) FOREIGN KEY REFERENCES Course(CNum)
+)
+
+CREATE TABLE Department (
+	Dnum char(4) PRIMARY KEY,
+	DTnum varchar(12),
+	OfficeLocation varchar(30),
+	Dname varchar(20),
+	SSN varchar(9) FOREIGN KEY REFERENCES Professor(SSN)
+)
+
+CREATE TABLE EnrollmentRecords (
+	GRADE varchar(2),
+	CWID varchar(9) FOREIGN KEY REFERENCES StudentRecords(CWID),
+	SNum Int FOREIGN KEY REFERENCES Section(SNum),
+	CNum varchar(9) FOREIGN KEY REFERENCES Section(CNum)
+);
+
+CRETAE TABLE Minor (
+	DNum char(4) NOT NULL FOREIGN KEY REFERENCES Department(DNum),
+	CWID char(9) NOT NULL FOREIGN KEY REFERENCES StudentRecords(CWID)
+);
+
+CREATE TABLE Section (
+	CNum varchar(8) NOT NULL FOREIGN KEY REFERENCES Course(CNum),
+	SNum Int PRIMARY KEY,
+	MeetDays varchar(15),
+	BegTime varchar(8),
+	EndTime varchar(8),
+	Classroom vharchar(8)
+);
+
+CREATE TABLE StudentRecords (
+	CWID varchar(9) PRIMARY KEY
+	SName varchar(20),
+	Saddr varchar(80),
+	STNum varchar(12),
+	DNum char(4) FOREIGN KEY REFERENCES Department(DNum)
+);
+
+CREATE TABLE Teaches (
+	SSN varchar(9) FOREIGN KEY REFERENCES Professor(SSN),
+	SNum Int UNIQUE FOREIGN KEY REFERENCES Section(SNum),
+	CNum varchar(8) FOREIGN KEY REFERENCES Section(SNum)
+);

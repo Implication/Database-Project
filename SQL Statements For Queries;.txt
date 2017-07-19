@@ -1,0 +1,86 @@
+//ProfessorQuery
+ INSERT INTO Professor VALUES ('123456789','Dr.','Sharp','M ','CPSC','123 Blue Beach','Honeytown','CA','12345','Engineering','$30,000','123 456 7890');
+ INSERT INTO Professor VALUES ('987654321','Mr.','Maze','M','CPEN','45HailRoad','Fullerton','CA','97542','Buisness','$32,124','911 172 8142');
+ INSERT INTO Professor VALUES ('123454321','Ms.',' Mars','F','CPSC','182 Bowling Alley','Fontana','CA','92144','Computer Science','$31,154','521 841 5129);
+
+//Course Query
+INSERT INTO Course VALUES('CPSC-120','INTRO TO PROGRAMMING','','3','','CPSC');
+INSERT INTO Course VALUES('CPSC-121','INTRO TO OBJECT ORIENTED PROGRAMMING','C++ OOP','3','48200','CPSC');
+INSERT INTO Course VALUES('CPEN-240','INTRO'TO'COMPUTER'DESIGN','Mechanical Eng','3','','CPEN');
+INSERT INTO Course VALUES('CPEN-411','BUILDING COMPUTERS','Making a Computer','3','48100','CPEN');
+
+//Department Query
+INSERT INTO Department VALUES('CPSC','657'278'1123','CS-500','Computer Science','123456789');
+INSERT INTO Department VALUES('CPEN','657 278 1123','ENG-420','Computer Engineering','987654321');
+
+//Teaches Query
+INSERT INTO Teaches VALUES('123454321','1','CPSC-120');
+INSERT INTO Teaches VALUES('123454321','3','CPSC-121');
+INSERT INTO Teaches VALUES('123456789','4','CPSC-121');
+INSERT INTO Teaches VALUES('123456789','2','CPSC-120');
+INSERT INTO Teaches VALUES('987654321','5','CPEN-240');
+INSERT INTO Teaches VALUES('987654321','7','CPEN-411');
+INSERT INTO Teaches VALUES('987654321','8','CPEN-411');
+INSERT INTO Teaches VALUES('987654321','6','CPEN-240');
+
+//Section Query
+INSERT INTO Section VALUES('CPSC-120','1','MonWed','4:00 PM','5:30 PM','CS-230');
+INSERT INTO Section VALUES('CPSC-120','2','TueTh','2:15 PM','3:45 PM','CS-140');
+INSERT INTO Section VALUES('CPSC-121','3','Mon','2:00 PM','5:00 PM','CS-440');
+INSERT INTO Section VALUES('CPSC-121','4','MonWedFri','12:00 PM','1:00 PM','CS-440');
+INSERT INTO Section VALUES('CPEN-240','5','Fri','12:00 PM','3:00 PM','ENG-440');
+INSERT INTO Section VALUES('CPEN-240','6','Thu','4:00 PM','5:30 PM','ENG-310');
+INSERT INTO Section VALUES('CPEN-411','7','Tue','4:00 PM','7:00 PM','ENG-162');
+INSERT INTO Section VALUES('CPEN-411','8','Mon','1:00 PM','4:00 PM','ENG-262');
+
+//EnrollmentRecords Query
+INSERT INTO EnrollmentRecords VALUES('C','489191023','3','CPSC-121');
+INSERT INTO EnrollmentRecords VALUES('A+','889045023','1','CPSC-120');
+INSERT INTO EnrollmentRecords VALUES('B+','889045023','4','CPSC-121');
+INSERT INTO EnrollmentRecords VALUES('A-','889045023','6','CPEN-240');
+INSERT INTO EnrollmentRecords VALUES('C+','489191023','4','CPSC-121');
+INSERT INTO EnrollmentRecords VALUES('A','489191023','8','CPEN-411');
+INSERT INTO EnrollmentRecords VALUES('B','581904790','8','CPEN-411');
+INSERT INTO EnrollmentRecords VALUES('C','482929102','8','CPEN-411');
+INSERT INTO EnrollmentRecords VALUES('C','321491009','7','CPEN-411');
+INSERT INTO EnrollmentRecords VALUES('C','892454676','7','CPEN-411');
+INSERT INTO EnrollmentRecords VALUES('C','829014989','7','CPEN-411');
+INSERT INTO EnrollmentRecords VALUES('C','829014989','6','CPEN-240');
+INSERT INTO EnrollmentRecords VALUES('B','829014989','1','CPSC-120');
+INSERT INTO EnrollmentRecords VALUES('A','892454676','1','CPSC-120');
+INSERT INTO EnrollmentRecords VALUES('C','321491009','1','CPSC-120');
+INSERT INTO EnrollmentRecords VALUES('A','321491009','4','CPSC-121');
+INSERT INTO EnrollmentRecords VALUES('A','482929102','5','CPEN-240');
+INSERT INTO EnrollmentRecords VALUES('A','894555850','4','CPSC-121');
+INSERT INTO EnrollmentRecords VALUES('B+','894555850','2','CPSC-120');
+INSERT INTO EnrollmentRecords VALUES('B-','812321471','2','CPSC-120');
+INSERT INTO EnrollmentRecords VALUES('B+','812321471','4','CPSC-121');
+INSERT INTO EnrollmentRecords VALUES('A','741289090','1','CPSC-120');
+INSERT INTO EnrollmentRecords VALUES('C','741289090','4','CPSC-121');
+INSERT INTO EnrollmentRecords VALUES('A','581904790','5','CPEN-240');
+INSERT INTO EnrollmentRecords VALUES('A+','581904790','1','CPSC-120');
+
+//Minor Query
+INSERT INTO Minor VALUES('CPEN','889045023');
+INSERT INTO Minor VALUES('CPCS','321491009');
+INSERT INTO Minor VALUES('CPEN','829014989');
+INSERT INTO Minor VALUES('CPSC','892454676');
+INSERT INTO Minor VALUES('CPSC','581904790');
+INSERT INTO Minor VALUES('CPEN','489191023');
+
+//Prerequities Query
+INSERT INTO Prerequities VALUES('48200','CPSC-120');
+INSERT INTO Prerequities VALUES('48100','CPEN-240');
+
+//StudentReocrds Query
+INSERT INTO StudentReocrds VALUES('889045023','Bob Ross','123 Spooner Street, Fullerton, CA, 92001','909 980 1423','CPSC');
+INSERT INTO StudentReocrds VALUES('489191023','Amy Heart','323 Habit Road, Los Angles, CA, 92501','281 490 1920','CPSC');
+INSERT INTO StudentReocrds VALUES('829014989','Blake Han','800 North State University, Fullerton, CA, 92811','909 764 4822','CPSC');
+INSERT INTO StudentReocrds VALUES('812321471','Lance Strong','49 Maple Palm Street, AppleValley, CA, 94588','909 124 4194','CPSC');
+INSERT INTO StudentReocrds VALUES('741289090','Christina Gales','574 Red Brick High, Sacramento, CA, 96840','680 492 8914','CPSC');
+INSERT INTO StudentReocrds VALUES('581904790','Anna Presley','170 Silk Road, BaldwinPark,','481 124 1924','CPEN');
+INSERT INTO StudentReocrds VALUES('482929102','Jennifer Paint','1924 Rainbow Road, Rancho Cucamonga, CA, 96531','492 123 4245','CPEN');
+INSERT INTO StudentReocrds VALUES('321491009','Lebron James','555 Penny Way, JacksVille, CA, 96664','456 900 1890','CPEN');
+INSERT INTO StudentReocrds VALUES('894555850','Junbo Yu','555 N.Commonwealth Ave.,Fullerton,CA,92831','714 810 9999','CPSC');
+INSERT INTO StudentReocrds VALUES('892454676','William Phillips','180 Yorba Linda Blvd, Fullerton,CA,93678','714 898 0000','CPEN');
+
